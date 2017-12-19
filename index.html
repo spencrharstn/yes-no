@@ -31,25 +31,36 @@
 
         #answer {
             font-size: 7rem;
+            cursor:pointer;
+        }
+
+        #subAnswer{
+            cursor:pointer;
+            color: darkgray;
         }
     </style>
 
 </head>
-<body>
+<body onload="changeAnswer()">
     <div class="main-content">
-        <div id="answer"></div>
+        <div id="answer" onclick="changeAnswer()"></div>
+        <div id="subAnswer" onclick="changeAnswer()"><i>Click to get another answer</i></div>
     </div>
 
     <script>
-        var answer = document.getElementById('answer')
-        var rand = Math.round(Math.random())
+        function changeAnswer(){
+            var answer = document.getElementById('answer')
+            var rand = Math.round(Math.random())
+            console.log(rand)
 
-        if (rand == 1) {
-            answer.innerHTML = "YES"
+            if (rand == 1) {
+                answer.innerHTML = "YES"
+            }
+            else {
+                answer.innerHTML = "NO"
+            }
         }
-        else{
-            answer.innerHTML = "NO"
-        }
+        
     </script>
 </body>
 </html>
