@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Random Answer</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <style>
+        html {
+            height: 100%;
+            background: #F0F0F0 url(img/bg_noise.png);
+        }
+
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .main-content {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #answer {
+            font-size: 7rem;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main-content">
+        <div id="answer"></div>
+    </div>
+
+    <script>
+        var answer = document.getElementById('answer')
+        var rand = Math.round(Math.random())
+
+        if (rand == 1) {
+            answer.innerHTML = "YES"
+        }
+        else{
+            answer.innerHTML = "NO"
+        }
+    </script>
+</body>
+</html>
