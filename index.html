@@ -30,13 +30,14 @@
         }
 
         #answer {
-            font-size: 7rem;
+            font-size: 8rem;
             cursor:pointer;
         }
 
         #subAnswer{
             cursor:pointer;
             color: darkgray;
+            font-size: .9rem;
         }
     </style>
 
@@ -51,7 +52,7 @@
         function changeAnswer(){
             var answer = document.getElementById('answer')
             var rand = Math.round(Math.random())
-            console.log(rand)
+            // console.log(rand)
 
             if (rand == 1) {
                 answer.innerHTML = "YES"
